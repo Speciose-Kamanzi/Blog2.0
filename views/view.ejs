@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  </head>
+  <body>
+
+     
+              <div class="jumbotron navbar navbar-default navbar-fixed"> 
+                  <h1>Welcome Home</h1>
+                  <a class="btn btn-primary" href="http://localhost:3000/">home</a>
+                  <a class="btn btn-primary" href="posts">archived</a>
+                  <a class="btn btn-primary" href="#">post new</a>
+            
+                </div>
+          </div>
+      
+
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <div class="container">
+        <div class="row">        
+        
+        <div class="panel panel-success">
+
+            <div class="panel-heading">
+              <h2 class="panel-title"><%- posts[id].title%></h2>
+             
+            </div>
+      
+            <div class="panel-body">
+              <img src="<%- posts[id].image%>" alt="" class="image">
+              <p><%- posts[id].content %></p>
+             
+                <h4><%- posts[id].date %></h4>
+                <a class="btn btn-primary" href="/edit/<%= posts[id].id %>">Edit</a>
+                <a class="btn btn-primary" href="/delete/<%= posts[id].id %>">delete</a>
+                
+
+            </div>
+      
+            <div class="panel-footer">Author: <%= posts[id].author %>
+             
+          </div>
+        
+        </div>
+    
+  </body>
+</html>

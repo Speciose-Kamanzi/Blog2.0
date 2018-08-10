@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  </head>
+  <body>
+
+     
+              <div class="jumbotron navbar navbar-default navbar-fixed"> 
+                  <h1>Please login</h1>
+                  <a class="btn btn-primary" href="http://localhost:3000/">home</a>
+                  <a class="btn btn-primary" href="posts">archived</a>
+                  <a class="btn btn-primary" href="new">post new</a>
+            
+                </div>
+          </div>
+
+          <div class="container">
+
+            <% if (message) { %>
+              <div class="alert alert-danger">
+                <%= message %>
+              </div>
+            
+            <% } %>
+            <div class="row">
+              <form method="post" action="/login">
+
+                <h2>Please login</h2>
+
+                <div class="input-group">
+                  <div class="info">
+                    <label for="Username">Username</label>
+                    <input name="username" type="text" id="username" class="form-control" placeholder="enter username" >
+                </div>
+              
+
+                <div class="input-group">
+
+                    <label for="Password">Password</label>
+                    <input name="password" type="password" id="password" class="form-control" placeholder="enter password" >
+                </div>
+              </div>
+
+                               
+                <a href="/index"><button type="submit" name="login" class="btn btn-primary" value="login">Login</button></a>
+    </form>
+
+    <a href="/register"><button name="register" class="btn btn-primary"></button> </a>
+
+    </div>
+    </div>
